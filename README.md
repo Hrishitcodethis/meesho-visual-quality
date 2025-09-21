@@ -24,35 +24,40 @@ It detects poor-quality product images, provides feedback to sellers, and cluste
 ---
 
 ## Repository Structure
-```mermaid
-mindmap
-  root((meesho-visual-quality))
-    README.md
-    requirements.txt
-    .env.example
-    docker-compose.yml
-    Dockerfile
-    api
-      main.py
-      routes.py
-      schemas.py
-    services
-      ingest.py
-      preprocess.py
-      embeddings.py
-    db
-      qdrant_client.py
-      postgres_client.py
-    clustering
-      cluster.py
-    ranking
-      ranker.py
-    utils
-      image_utils.py
-    tests
-      test_scoring.py
-    LICENSE
-```
+meesho-visual-quality/
+├── README.md
+├── requirements.txt
+├── .env.example
+├── docker-compose.yml
+├── Dockerfile
+│
+├── api/
+│   ├── main.py
+│   ├── routes.py
+│   └── schemas.py
+│
+├── services/
+│   ├── ingest.py
+│   ├── preprocess.py
+│   └── embeddings.py
+│
+├── db/
+│   ├── qdrant_client.py
+│   └── postgres_client.py
+│
+├── clustering/
+│   └── cluster.py
+│
+├── ranking/
+│   └── ranker.py
+│
+├── utils/
+│   └── image_utils.py
+│
+├── tests/
+│   └── test_scoring.py
+│
+└── LICENSE
 
 ### File/Folder Descriptions
 - **README.md** → Project overview, documentation, and setup guide.  
@@ -125,6 +130,7 @@ docker-compose up --build
 ```bash
 docker-compose up --build
 ```
+
 
 
 
