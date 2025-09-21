@@ -1,0 +1,2 @@
+metadata_type,query_product_id,query_title,query_path,similarity_method,total_comparisons,timestamp
+query_info,mock_0,Product 0,data/052628.jpg,cosine,1000,2025-09-21T23:12:01.526185
