@@ -23,41 +23,42 @@ It detects poor-quality product images, provides feedback to sellers, and cluste
 
 ---
 
-## Repository Structure
+# Repository Structure
+
+------------
 meesho-visual-quality/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── docker-compose.yml
-├── Dockerfile
+├── LICENSE              <- License file
+├── README.md            <- Top-level README with project details
+├── requirements.txt     <- Python dependencies
+├── .env.example         <- Example environment variables
+├── docker-compose.yml   <- Docker Compose config for API, DB, and Qdrant
+├── Dockerfile           <- Dockerfile for API service
 │
-├── api/
-│   ├── main.py
-│   ├── routes.py
-│   └── schemas.py
+├── api                  <- FastAPI application
+│   ├── main.py          <- Entry point for FastAPI server
+│   ├── routes.py        <- API endpoint definitions
+│   └── schemas.py       <- Pydantic models for request/response
 │
-├── services/
-│   ├── ingest.py
-│   ├── preprocess.py
-│   └── embeddings.py
+├── services             <- Core service layer
+│   ├── ingest.py        <- Data ingestion logic
+│   ├── preprocess.py    <- Image preprocessing pipeline
+│   └── embeddings.py    <- Embedding generation using ML models
 │
-├── db/
-│   ├── qdrant_client.py
-│   └── postgres_client.py
+├── db                   <- Database clients
+│   ├── qdrant_client.py <- Qdrant (vector DB) client wrapper
+│   └── postgres_client.py <- PostgreSQL client wrapper
 │
-├── clustering/
+├── clustering           <- Image clustering logic
 │   └── cluster.py
 │
-├── ranking/
+├── ranking              <- Image ranking and scoring logic
 │   └── ranker.py
 │
-├── utils/
-│   └── image_utils.py
+├── utils                <- Utility functions
+│   └── image_utils.py   <- Helper functions for image operations
 │
-├── tests/
-│   └── test_scoring.py
-│
-└── LICENSE
+├── tests                <- Unit tests
+│   └── test_scoring.py  <- Tests for ranking/scoring module
 
 ### File/Folder Descriptions
 - **README.md** → Project overview, documentation, and setup guide.  
@@ -130,6 +131,7 @@ docker-compose up --build
 ```bash
 docker-compose up --build
 ```
+
 
 
 
