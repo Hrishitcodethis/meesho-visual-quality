@@ -24,41 +24,42 @@ It detects poor-quality product images, provides feedback to sellers, and cluste
 ---
 
 # Repository Structure
-
 ------------
-meesho-visual-quality/
-├── LICENSE              <- License file
-├── README.md            <- Top-level README with project details
-├── requirements.txt     <- Python dependencies
-├── .env.example         <- Example environment variables
-├── docker-compose.yml   <- Docker Compose config for API, DB, and Qdrant
-├── Dockerfile           <- Dockerfile for API service
-│
-├── api                  <- FastAPI application
-│   ├── main.py          <- Entry point for FastAPI server
-│   ├── routes.py        <- API endpoint definitions
-│   └── schemas.py       <- Pydantic models for request/response
-│
-├── services             <- Core service layer
-│   ├── ingest.py        <- Data ingestion logic
-│   ├── preprocess.py    <- Image preprocessing pipeline
-│   └── embeddings.py    <- Embedding generation using ML models
-│
-├── db                   <- Database clients
-│   ├── qdrant_client.py <- Qdrant (vector DB) client wrapper
-│   └── postgres_client.py <- PostgreSQL client wrapper
-│
-├── clustering           <- Image clustering logic
-│   └── cluster.py
-│
-├── ranking              <- Image ranking and scoring logic
-│   └── ranker.py
-│
-├── utils                <- Utility functions
-│   └── image_utils.py   <- Helper functions for image operations
-│
-├── tests                <- Unit tests
-│   └── test_scoring.py  <- Tests for ranking/scoring module
+```bash
+    meesho-visual-quality/
+    ├── LICENSE              <- License file
+    ├── README.md            <- Top-level README with project details
+    ├── requirements.txt     <- Python dependencies
+    ├── .env.example         <- Example environment variables
+    ├── docker-compose.yml   <- Docker Compose config for API, DB, and Qdrant
+    ├── Dockerfile           <- Dockerfile for API service
+    │
+    ├── api                  <- FastAPI application
+    │   ├── main.py          <- Entry point for FastAPI server
+    │   ├── routes.py        <- API endpoint definitions
+    │   └── schemas.py       <- Pydantic models for request/response
+    │
+    ├── services             <- Core service layer
+    │   ├── ingest.py        <- Data ingestion logic
+    │   ├── preprocess.py    <- Image preprocessing pipeline
+    │   └── embeddings.py    <- Embedding generation using ML models
+    │
+    ├── db                   <- Database clients
+    │   ├── qdrant_client.py <- Qdrant (vector DB) client wrapper
+    │   └── postgres_client.py <- PostgreSQL client wrapper
+    │
+    ├── clustering           <- Image clustering logic
+    │   └── cluster.py
+    │
+    ├── ranking              <- Image ranking and scoring logic
+    │   └── ranker.py
+    │
+    ├── utils                <- Utility functions
+    │   └── image_utils.py   <- Helper functions for image operations
+    │
+    ├── tests                <- Unit tests
+    │   └── test_scoring.py  <- Tests for ranking/scoring module
+```
 
 ### File/Folder Descriptions
 - **README.md** → Project overview, documentation, and setup guide.  
@@ -131,6 +132,7 @@ docker-compose up --build
 ```bash
 docker-compose up --build
 ```
+
 
 
 
